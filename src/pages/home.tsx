@@ -1,9 +1,11 @@
-import React from 'react';
-import {Header} from '@components/home'
+import React, { useState } from 'react';
+import {Header, CreateChat} from '@components/home'
 export const Home: React.FC = () => {
+  const [hidden, setHidden] = useState(true);
   return (
     <div>
-      <Header />
+      <Header onCreate={() => setHidden(false)} />
+      <CreateChat hidden={hidden} onClose={setHidden} />
     </div>
   )
 }
