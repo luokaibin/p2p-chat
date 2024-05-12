@@ -1,1 +1,1 @@
-export * from './getVisitorId'
+export * from './getDeviceId'

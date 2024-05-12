@@ -25,7 +25,7 @@ export const Header: React.FC<HeaderProps> = ({onCreate}) => {
           size="small"
           type="rounded"
         />
-        <span className={cn("text-base")}>ID: {profile?.userId}</span>
+        <span className={cn("text-base")}>ID: {profile?.p2pId}</span>
       </div>
       <Plus className={cn("w-8 h-8 fill-slate-950 cursor-pointer")} onClick={onCreate} />
     </div>

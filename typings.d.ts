@@ -17,3 +17,5 @@ declare module "csstype" {
     [key: string]: string;
   }
 }
+
+declare type MaybeNull<T> = T | null;

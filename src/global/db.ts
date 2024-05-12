@@ -5,6 +5,11 @@ import find from 'pouchdb-find';
 PouchDB.plugin(find);
 PouchDB.plugin(delta);
 
+export type Profile = {
+  p2pId: string;
+  avatar: string;
+}
+
 export class DB {
   constructor() {
     this.#createIndex();
@@ -12,12 +17,12 @@ export class DB {
   #createIndex() {
     this.profile.createIndex({
       index: {
-        fields: ['deviceId', 'userId']
+        fields: ['p2pId']
       }
     })
   }
   get profile() {
-    return new PouchDB<{userId: string; deviceId: string; avatar: string;}>('Profile', {
+    return new PouchDB<Profile>('Profile', {
       revs_limit: 5,
     })
   }
