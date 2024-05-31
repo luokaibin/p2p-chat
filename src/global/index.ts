@@ -8,8 +8,9 @@ class Global extends P2P {
   }
 
   async #init() {
-    super.init()
+    super.init();
   }
+  
 
   static getInstance() {
     if (!this.instance) {

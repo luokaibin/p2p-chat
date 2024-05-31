@@ -18,7 +18,7 @@ export const CreateChat:React.FC<CreateChatProps> = ({hidden, onClose}) => {
     })
   }
   return (
-    <div className={cn("fixed top-0 bottom-0 left-0 right-0 flex justify-center items-center px-4", {
+    <div className={cn("fixed top-0 bottom-0 left-0 right-0 flex justify-center items-center px-4 z-20", {
       'hidden': hidden
     })}>
       <div className={cn("fixed top-0 bottom-0 left-0 right-0 bg-slate-950/30")} />

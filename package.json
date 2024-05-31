@@ -10,10 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@fingerprintjs/fingerprintjs": "^4.3.0",
     "@multiavatar/multiavatar": "^1.0.7",
     "classnames": "^2.5.1",
-    "delta-pouch": "^1.0.2",
+    "dayjs": "^1.11.11",
+    "gsap": "^3.12.5",
+    "lodash-es": "^4.17.21",
     "nanoid": "^5.0.7",
     "peerjs": "^1.5.4",
     "pouchdb": "^8.0.1",
@@ -23,9 +24,11 @@
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.23.1",
     "tailwind-merge": "^2.3.0",
-    "valtio": "^1.13.2"
+    "valtio": "^1.13.2",
+    "yup": "^1.4.0"
   },
   "devDependencies": {
+    "@types/lodash-es": "^4.17.12",
     "@types/node": "^20.12.12",
     "@types/pouchdb": "^6.4.2",
     "@types/react": "^18.3.2",
@@ -37,6 +40,7 @@
     "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.7",
+    "events": "^3.3.0",
     "postcss": "^8.4.38",
     "tailwindcss": "^3.4.3",
     "typescript": "^5.4.5",

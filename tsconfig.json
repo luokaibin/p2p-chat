@@ -27,7 +27,10 @@
       "@icons/*": ["./src/icons/*"],
       "@plugins": ["./src/plugins/index.ts"],
       "@plugins/*": ["./src/plugins/*"],
-      "cn": ["./src/plugins/cn.ts"]
+      "@hooks": ["./src/hooks/index.ts"],
+      "@hooks/*": ["./src/hooks/*"],
+      "cn": ["./src/plugins/cn.ts"],
+      "relativeTime": ["./src/plugins/relativeTime.ts"],
     }
   },
   "include": ["src"],

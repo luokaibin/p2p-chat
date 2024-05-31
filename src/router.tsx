@@ -1,14 +1,26 @@
-import React from "react";
-import { createBrowserRouter, Route, Link } from "react-router-dom";
+import { RouteObject, createBrowserRouter } from "react-router-dom";
 import {Home} from '@pages/home'
-const config = [
+import {Chat} from '@pages/chat'
+import global from '@global';
+
+const config:RouteObject[] = [
   {
     path: "/",
     element: (<Home />),
-  },
-  {
-    path: "about",
-    element: <div>About</div>,
+    children: [
+      {
+        path: 'chat/:p2pId',
+        element: (<Chat />),
+        loader: async ({params: {p2pId}}) => {
+          const {docs} = await global.message.find({
+            selector: {p2pId, createAt: {'$exists': true}},
+            sort: [{createAt: 'asc'}]
+          })
+          global.markAsRead(p2pId as string)
+          return docs;
+        }
+      }
+    ]
   }
 ]
 

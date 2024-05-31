@@ -15,9 +15,14 @@ export default defineConfig({
       '@pages': resolve(__dirname, 'src/pages'),
       '@components': resolve(__dirname, 'src/components'),
       'cn': resolve(__dirname, 'src/plugins/cn.ts'),
+      'relativeTime': resolve(__dirname, 'src/plugins/relativeTime.ts'),
       '@global': resolve(__dirname, 'src/global'),
       '@icons': resolve(__dirname, 'src/icons'),
       '@plugins': resolve(__dirname, 'src/plugins'),
+      '@hooks': resolve(__dirname, 'src/hooks'),
     }
+  },
+  server: {
+    host: true,
   }
 })

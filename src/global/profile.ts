@@ -24,8 +24,12 @@ export class Profile extends DB {
     const avatar = `data:image/svg+xml;utf8,${encodeURIComponent(svgCode || '')}`;
     return avatar;
   }
-
+  #createP2pId(id?: string): string {
+    if (id && !id?.endsWith('-')) return id;
+    return this.#createP2pId(nanoid(8));
+  }
   protected async init() {
+    await super.init()
     const {docs} = await this.me.find({
       selector: {},
       fields: ['p2pId', 'avatar']
@@ -34,11 +38,11 @@ export class Profile extends DB {
       this.#data.profile = docs[0];
       return;
     }
-    const p2pId = nanoid(8);
+    const p2pId = this.#createP2pId();
     const avatar = this.genSquareAvatar(p2pId)
     const profile = {p2pId, avatar}
     this.#data.profile = profile
-    this.me.save(profile)
+    this.me.post(profile)
   }
   updateUserState(state: IState['state']) {
     this.#data.profile.state = state;
