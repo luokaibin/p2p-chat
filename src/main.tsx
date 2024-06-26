@@ -5,7 +5,7 @@ import { RouterProvider } from "react-router-dom";
 import dayjs from 'dayjs';
 import "dayjs/locale/zh"
 import './index.css'
-import "react-chat-elements/dist/main.css";
+import 'photoswipe/style.css';
 
 dayjs.locale('zh')
 

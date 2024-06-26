@@ -61,7 +61,11 @@ export class P2P extends ChatList {
     }
     const res = await this.message.post(doc)
     this.update(id, {latest: doc})
-    this.emit(id, doc)
+    this.emit(id, {
+      _id: res.id,
+      _rev: res.rev,
+      ...doc
+    })
 
     return {
       _id: res.id,
@@ -98,8 +102,12 @@ export class P2P extends ChatList {
         const picBlob = new Blob([doc.value], { type: 'application/octet-stream' })
         doc.value = picBlob;
       }
-      this.message.post(doc)
-      this.emit(id, doc)
+      const res = await this.message.post(doc)
+      this.emit(id, {
+        _rev: res.rev,
+        _id: res.id,
+        ...doc
+      })
       const subscribers = this.getEventSubscribers(id);
       const unread = subscribers?.length > 0 ? 0 : (this.chatMap[id]?.unread || 0) + 1;
       await this.update(id, {latest: doc, unread});

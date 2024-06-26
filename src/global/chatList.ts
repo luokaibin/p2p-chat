@@ -3,7 +3,7 @@ import { Profile } from "./profile";
 import { Profile as IProfile, Message, profileSchema } from './db'
 import { IDbId, IState } from "./type";
 // Chat does not save unread message counts, the initial unread count is retrieved from the message list.
-export type IChat = IProfile & IDbId;
+export type IChat = IDbId<IProfile>;
 type IChatValue = IChat & IState & {
   errorMessage: string;
   latest: Pick<Message, 'ext'|'p2pId'|'senderP2pId'|'type'|'value'|'createAt'>;

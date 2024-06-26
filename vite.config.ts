@@ -13,6 +13,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@pages': resolve(__dirname, 'src/pages'),
+      "@ui": resolve(__dirname, 'src/components/global'),
       '@components': resolve(__dirname, 'src/components'),
       'cn': resolve(__dirname, 'src/plugins/cn.ts'),
       'relativeTime': resolve(__dirname, 'src/plugins/relativeTime.ts'),

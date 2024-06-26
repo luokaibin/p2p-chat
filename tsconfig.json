@@ -21,15 +21,16 @@
     "noFallthroughCasesInSwitch": true,
     "paths": {
       "@pages/*": ["./src/pages/*"],
+      "@ui": ["./src/components/global/index.ts"],
       "@components/*": ["./src/components/*"],
       "@global": ["./src/global/index.ts"],
       "@global/*": ["./src/global/*"],
       "@icons/*": ["./src/icons/*"],
+      "cn": ["./src/plugins/cn.ts"],
       "@plugins": ["./src/plugins/index.ts"],
       "@plugins/*": ["./src/plugins/*"],
       "@hooks": ["./src/hooks/index.ts"],
       "@hooks/*": ["./src/hooks/*"],
-      "cn": ["./src/plugins/cn.ts"],
       "relativeTime": ["./src/plugins/relativeTime.ts"],
     }
   },

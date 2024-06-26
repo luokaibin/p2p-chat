@@ -1,9 +1,9 @@
 import dayjs from "dayjs";
 
-type IFn = (...args: unknown[]) => unknown;
+type IFn<T> = (...args: T[]) => unknown;
 
-type IEvent = {
-  [key: string]: IFn[];
+type IEvent<T = unknown> = {
+  [key: string]: IFn<T>[];
 };
 type ITodo = {
   [key: string]: {
@@ -36,7 +36,7 @@ export class PubSub {
     const created = dayjs().valueOf();
     this.#todoMap[eventName].push({ args, created });
   }
-  #off = (fn: IFn) => {
+  #off = <T = unknown>(fn: IFn<T>) => {
     const scope = fn.prototype._scope;
     const id: string = fn.prototype._id;
     scope.forEach((eventName: string) => {
@@ -62,7 +62,7 @@ export class PubSub {
     });
   }
 
-  on(eventName: string | string[], fn: IFn) {
+  on<T = unknown>(eventName: string | string[], fn: IFn<T>) {
     if (typeof fn !== "function") {
       throw new Error("The function 'fn' does not exist.");
     }
@@ -73,6 +73,8 @@ export class PubSub {
     }
     eventName.forEach((event) => {
       this.#eventMap[event] = this.#eventMap[event] || [];
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
       this.#eventMap[event].push(fn);
     });
     this.#checkTodo(eventName);

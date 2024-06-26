@@ -8,7 +8,7 @@ export const Home: React.FC = () => {
 
   return (
     <div className={cn("flex")}>
-      <div className={cn("w-screen md:w-[290px]", {
+      <div className={cn("w-screen h-screen md:w-[290px] md:shrink-0 border-r dark:border-slate-700", {
         'hidden': location.pathname !== '/',
         'md:block': location.pathname !== '/'
       })}>

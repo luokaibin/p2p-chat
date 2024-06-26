@@ -10,6 +10,10 @@ class Global extends P2P {
   async #init() {
     super.init();
   }
+
+  toggleTheme() {
+    document.querySelector('html')?.classList.toggle('dark')
+  }
   
 
   static getInstance() {
@@ -18,6 +22,7 @@ class Global extends P2P {
     }
     return this.instance;
   }
+
 }
 
 export default Global.getInstance();

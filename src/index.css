@@ -11,23 +11,43 @@
     scrollbar-width: none;
   }
   .message-info {
-    /* @apply p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400; */
-    @apply p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50;
+    @apply p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400;
   }
   .message-error {
-    /* @apply p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400; */
-    @apply p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50;
+    @apply p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400;
   }
   .message-success {
-    /* @apply p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400; */
-    @apply p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50;
+    @apply p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400;
   }
   .message-warning {
-    /* @apply p-4 mb-4 text-sm text-yellow-800 rounded-lg bg-yellow-50 dark:bg-gray-800 dark:text-yellow-300; */
-    @apply p-4 mb-4 text-sm text-yellow-800 rounded-lg bg-yellow-50;
+    @apply p-4 mb-4 text-sm text-yellow-800 rounded-lg bg-yellow-50 dark:bg-gray-800 dark:text-yellow-300;
   }
   .message-normal {
-    /* @apply p-4 text-sm text-gray-800 rounded-lg bg-gray-50 dark:bg-gray-800 dark:text-gray-300; */
-    @apply p-4 text-sm text-gray-800 rounded-lg bg-gray-50;
+    @apply p-4 text-sm text-gray-800 rounded-lg bg-gray-50 dark:bg-gray-800 dark:text-gray-300;
+  }
+  .btn-fill-blue {
+    @apply text-white bg-blue-500 hover:bg-blue-600;
+  }
+  .btn-fill-sky {
+    @apply text-white bg-sky-500 hover:bg-sky-600 dark:bg-sky-600 dark:hover:bg-sky-700;
+  }
+  .btn-sx {
+    @apply h-8 py-1 px-2 rounded;
+  }
+  .btn-small {
+    @apply h-10 py-1 px-2 rounded;
+  }
+  .input-small {
+    @apply rounded h-10 py-1 px-2 outline-none;
+  }
+  .input-fill-white {
+    @apply bg-white dark:bg-gray-700 dark:text-white;
+  }
+  body {
+    @apply bg-gray-50 dark:bg-slate-950;
   }
 }
+/* .pswp__icn {
+  width: 2.5rem !important;
+  height: 2.5rem !important;
+} */

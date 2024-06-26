@@ -17,7 +17,7 @@ export type Profile = Me & {
 };
 
 export type Message = {
-  type: 'text'|'photo'|'video'|'file'|'system';
+  type: 'text'|'photo';
   value: string|Blob;
   p2pId: string;
   ext?: string;
