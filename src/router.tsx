@@ -1,7 +1,7 @@
 import { RouteObject, createBrowserRouter } from "react-router-dom";
 import {Home} from '@pages/home'
 import {Chat} from '@pages/chat'
-import {Test} from '@pages/test'
+// import {Test} from '@pages/test'
 
 import global from '@global';
 
@@ -24,10 +24,10 @@ const config:RouteObject[] = [
       }
     ]
   },
-  {
-    path: "/test",
-    element: (<Test />)
-  }
+  // {
+  //   path: "/test",
+  //   element: (<Test />)
+  // }
 ]
 
 export const router = createBrowserRouter(config)

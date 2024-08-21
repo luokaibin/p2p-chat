@@ -1,0 +1,85 @@
+{
+  "name": "Private Chat",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon",
+      "purpose": "any"
+    },
+    {
+      "src": "maskable_icon_x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "maskable"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshot.png",
+      "sizes": "393x965",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/?utm_source=pwahomescreen&amp;amp;utm_medium=shortcut",
+  "display": "standalone",
+  "dir": "ltr",
+  "lang": "en-US",
+  "theme_color": "#0a0a0a",
+  "background_color": "#0a0a0a",
+  "description": "(creator, fans)",
+  "id": "so-mon",
+  "orientation": "portrait",
+  "share_target": {
+    "action": "/compose/tweet",
+    "enctype": "multipart/form-data",
+    "method": "POST",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url",
+      "files": [
+        {
+          "name": "externalMedia",
+          "accept": [
+            "image/jpeg",
+            "image/png",
+            "image/gif"
+          ]
+        }
+      ]
+    }
+  },
+  "shortcuts": [
+    {
+      "name": "QUESTS",
+      "start_url": "/?utm_source=pwahomescreen&amp;utm_medium=shortcut",
+      "description": "Embark on quests",
+      "icons": [
+        {
+          "src": "logo192.png",
+          "type": "image/png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ],
+  "categories": [
+    "productivity",
+    "social"
+  ],
+  "short_name": "SoMon",
+  "prefer_related_applications": true
+}
